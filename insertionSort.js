@@ -6,17 +6,17 @@ function insertion(arr) {
         newarr[i] = arr[i];
         console.log(`pos ${newarr}`);
 
-        j = newarr.length-1;
-        while (j > 0) {
-            if (newarr[j] < newarr[j - 1]) {
-                n = newarr[j - 1];
-                newarr[j - 1] = newarr[j];
+        j = 0;
+        while (j < newarr.length) {
+            if (newarr[j] > newarr[i]) {
+                n = newarr[i];
+                newarr[i] = newarr[j];
                 newarr[j] = n;
             };
-            j--;
+            j++;
         };
     };
     return newarr;
 }
 
-console.log(insertion([2,1,15,1,3,789]));
+console.log(insertion([13,2,3,8,1,5,2]));
